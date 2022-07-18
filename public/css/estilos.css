@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(../font/montserrat/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url(../font/poppins/Poppins-Regular.ttf);
+}
+/*---- Estilos generales ----*/
+body{
+    background-color: #eee;
+}
+.border-none{
+    border: 0px;
+}
+/*Botones*/
+.btn-alc-1{
+    color: #fff;
+    background: #1151d3;
+}
+/*---- Tipos de letras ----*/
+.monts-bold{
+    font-family: 'Montserrat Bold';
+    letter-spacing: -0.05em;
+}
+/*---- Backgrounds ----*/
+.bg-cl-1{
+    background-color: #1151d3;
+    color: #fff;
+}
+.bg-cl-2{
+    background-color: #ffffff;
+}
+
+/*---- Login - Register - olvido contraseña ----*/
+.lro-rs .card-header{
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 40px;
+    padding: 0 7px 0 15px;
+    font-size: 18px;
+}
+/*Menus*/
+.gr-nav-1{
+    background: #202f5b;
+    color: #ffffff;
+    padding: 0px;
+}
+.gr-nav-1 ul li{
+
+
+}
+.gr-nav-1 ul li.active{
+    background: #1151d3;
+}
+.gr-nav-1 ul li:active,.gr-nav-1 ul li:hover{
+    background: #1151d3;
+    color: #ffffff;
+}
+.gr-nav-1 ul li a:hover{
+    color: #fff;
+  
+}
+.gr-nav-1 ul li.active a{
+    color: #ffffff;
+}
+.gr-nav-1 ul li a{
+    color: rgba(255,255,255,0.71);
+    font-family: 'Montserrat Bold';
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 22px !important;
+    letter-spacing: 0.5px;
+}
+.gr-nav-1  .dropdown-menu {
+    background: #1f2024;
+    margin: 0;
+    padding: 0px;
+    border-radius: 0;
+    border: 0px ;
+}
+.gr-nav-1 .dropdown-menu[data-bs-popper] {
+    margin-top: 0rem;
+}
+.gr-nav-1  .dropdown-item:hover, 
+.gr-nav-1  .dropdown-item:focus {
+    color: #ffffff;
+    background-color: #1151d3;
+}
+.gr-nav-1 .dropdown-menu > li > a {
+    padding: 12px 15px !important;
+    font-size: 12px;
+    font-family: 'Poppins Regular';
+    display: block;
+    transition: .3s;
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: break-spaces;
+    color: #ffffff;
+}
