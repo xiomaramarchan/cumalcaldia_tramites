@@ -23,125 +23,266 @@
 </head>
 <body>
     <div id="app">
-        <header>
-        <!-- Primer menu: Hora y redes sociales -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">18 de julio de 2022 15:45</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fab fa-facebook"></i></a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                        </li>
-                    </ul>
-                    <
+      <div class="mg-head-detail hidden-xs">
+            <!-- Primer menu: Hora y redes sociales -->
+                <nav class="navbar navbar-expand-lg gr-nav-2">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">18 de julio de 2022 15:45</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 redes-sociales">
+                            <li class="nav-item">
+                                <a class="nav-link " target="_blank" href="https://es-la.facebook.com/AlcaldiaMpioPotencia">
+                                    <span class="icon-soci facebook-icon">
+                                        <i class="fab fa-facebook"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" target="_blank" href="https://mobile.twitter.com/alcaldiacna">
+                                    <span class="icon-soci twitter-icon">
+                                        <i class="fab fa-twitter"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_blank" href="https://www.instagram.com/alcaldiacna/?hl=es">
+                                    <span class="icon-soci instagram-icon">
+                                        <i class="fab fa-instagram"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Header principal: imagen y titulo de la alcaldia -->
+                <div class="mg-nav-widget-area-back">
+                    <div class="overlay">
+                        <div class="inner">
+                            <div class="container-fluid">
+                                <div class="mg-nav-widget-area">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 col-sm-4 text-center-xs">
+                                            <div class="navbar-header">
+                                                <div class="site-branding-text">
+                                                    <h1 class="site-title">Alcaldía del Estado Sucre</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </nav>
-            
-            <nav class="navbar navbar-expand-lg navbar-wp gr-nav-1">
-                <div class="container-fluid">
-                    <!--a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a-->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar 
-                        <ul class="navbar-nav me-auto">
+                <!-- segundo menu: link de las diferentes vistas -->
+                <nav class="navbar navbar-expand-lg navbar-wp gr-nav-1">
+                    <div class="container-fluid">
+                        <!--a class="navbar-brand" href="{{ url('/') }}">
+                            {{ config('app.name', 'Laravel') }}
+                        </a-->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                        </ul>
-    -->
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ">
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#">Bienvenidos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">¿Quiénes Somos?</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Noticias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Gacetas Oficiales</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestión</a>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Plan de Gobierno</a></li>
-                                <li><a class="dropdown-item" href="#">Proyectos</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Constancia de trabajo</a></li>
-                                </ul>
-                            </li>
-                            <!-- Authentication Links -->
-                            @guest
-                                @if (Route::has('login'))
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </li>
-                                @endif
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <!-- Left Side Of Navbar 
+                            <ul class="navbar-nav me-auto">
 
-                                @if (Route::has('register'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                    </li>
-                                @endif
-                            @else
+                            </ul>
+        -->
+                            <!-- Right Side Of Navbar -->
+                            <ul class="navbar-nav ">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">Bienvenidos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">¿Quiénes Somos?</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Noticias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Gacetas Oficiales</a>
+                                </li>
                                 <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
-                                    </a>
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestión</a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Plan de Gobierno</a></li>
+                                    <li><a class="dropdown-item" href="#">Proyectos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Constancia de trabajo</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Authentication Links -->
+                                @guest
+                                    @if (Route::has('register'))
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registrate') }}</a>
+                                        </li>
+                                    @endif
+                                    @if (Route::has('login'))
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                                        </li>
+                                    @endif
 
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                
+                                @else
+                                    <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }}
                                         </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-                        </ul>
+                                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                            document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
+                                @endguest
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </header>
+                </nav>
+            </div>
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer>
+            <div class="overlay">
+                <div class="mg-footer-bottom-area">
+                    <div class="container-fluid">
+                        <div class="divide-line"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="site-branding-text">
+                                    <h1 class="site-title">
+                                        <a href="">Alcaldía del Estado Sucre</a>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-right text-xs">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 redes-sociales">
+                                <li class="nav-item">
+                                    <a class="nav-link " target="_blank" href="https://es-la.facebook.com/AlcaldiaMpioPotencia">
+                                        <span class="icon-soci facebook-icon">
+                                            <i class="fab fa-facebook"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" target="_blank" href="https://mobile.twitter.com/alcaldiacna">
+                                        <span class="icon-soci twitter-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" target="_blank" href="https://www.instagram.com/alcaldiacna/?hl=es">
+                                        <span class="icon-soci instagram-icon">
+                                            <i class="fab fa-instagram"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mg-footer-copyright">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 text-xs">
+                                <p>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer" class="customize-unpreviewable">Alcaldía</a>
+                                    <span class="sep"></span>
+                                    Cumaná
+                                </p>  
+                            </div>
+                            <div class="col-md-6 text-right text-xs">
+                                <ul class="navbar-nav ">
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">Bienvenidos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">¿Quiénes Somos?</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Noticias</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Gacetas Oficiales</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestión</a>
+                                        <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Plan de Gobierno</a></li>
+                                        <li><a class="dropdown-item" href="#">Proyectos</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
+                                        <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Constancia de trabajo</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- Authentication Links -->
+                                    @guest
+                                        @if (Route::has('register'))
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrate') }}</a>
+                                            </li>
+                                        @endif
+                                        @if (Route::has('login'))
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                                            </li>
+                                        @endif
+
+                                    
+                                    @else
+                                        <li class="nav-item dropdown">
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name }}
+                                            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                                document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                        </li>
+                                    @endguest
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+    <script src="{{ asset('js/all.min.js') }}">  </script>
 </body>
 </html>
