@@ -3,8 +3,16 @@
     src: url(../font/montserrat/Montserrat-Bold.ttf);
 }
 @font-face {
+    font-family: 'Montserrat SemiBold';
+    src: url(../font/montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face {
     font-family: 'Poppins Regular';
     src: url(../font/poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url(../font/poppins/Poppins-Medium.ttf);
 }
 /*---- Estilos generales ----*/
 body{
@@ -18,10 +26,26 @@ body{
     color: #fff;
     background: #1151d3;
 }
+.btn-alc-2{
+    background-color: #dd0e0e;
+    color: #ffffff;
+}
+.btn-alc-2:hover{
+    background-color: #c51212;
+    color: #ffffff;
+}
 /*---- Tipos de letras ----*/
 .monts-bold{
     font-family: 'Montserrat Bold';
     letter-spacing: -0.05em;
+}
+/*---- Colores de letras ----*/
+.ltr-color-1{
+    color: #dd0e0e;
+}
+.ltr-color-1:hover{
+    color: #c51212;
+    border: 1px solid #c51212;
 }
 /*---- Backgrounds ----*/
 .bg-cl-1{
@@ -32,6 +56,7 @@ body{
     background-color: #ffffff;
 }
 
+
 /*---- Login - Register - olvido contraseña ----*/
 .lro-rs .card-header{
     font-weight: 700;
@@ -40,11 +65,31 @@ body{
     padding: 0 7px 0 15px;
     font-size: 18px;
 }
+.lro-rs .card-header{
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 40px;
+    padding: 0 7px 0 15px;
+    font-size: 18px;
+}
+.lro-rs label,.lro-rs a,.lro-rs input{
+    font-family: 'Poppins Medium';
+}
+.lro-rs button{
+    font-family: 'Montserrat SemiBold';
+}
+.lro-rs .card-body {
+    padding: 2rem 1rem 4rem;
+}
+.lro-rs .cont-1{
+    margin-top: 10px;
+}
 /*Menus*/
 .gr-nav-1{
     background: #202f5b;
     color: #ffffff;
     padding: 0px;
+    height: 50px;
 }
 .gr-nav-1 ul li{
 
@@ -61,6 +106,9 @@ body{
     color: #fff;
   
 }
+.gr-nav-1 ul li a:focus {
+    color: #fff;
+}
 .gr-nav-1 ul li.active a{
     color: #ffffff;
 }
@@ -69,8 +117,9 @@ body{
     font-family: 'Montserrat Bold';
     font-size: 14px;
     text-transform: uppercase;
-    padding: 10px 22px !important;
+    padding: 13px 22px !important;
     letter-spacing: 0.5px;
+    height: auto !important;
 }
 .gr-nav-1  .dropdown-menu {
     background: #1f2024;
@@ -93,8 +142,74 @@ body{
     font-family: 'Poppins Regular';
     display: block;
     transition: .3s;
+    line-height: 30px;
     font-weight: normal;
     text-transform: uppercase;
     white-space: break-spaces;
     color: #ffffff;
+}
+.gr-nav-2{
+    background: #202f5b;
+    color: #ffffff;
+    padding: 5px 0px 10px;
+}
+.gr-nav-2 .container-fluid,
+.gr-nav-1 .container-fluid{
+    padding-right: 50px ;
+    padding-left: 50px ;
+}
+/*Redes sociales*/
+.redes-sociales li {
+    margin-right: 5px;
+    width: 35px;
+}
+.redes-sociales .icon-soci{
+    display: inline-block;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    margin: 0;
+    text-align: center;
+    width: 35px;
+    border-radius: 3px;
+}
+.redes-sociales .facebook-icon{
+    background: #3b5998;
+    color: #fff;
+}
+.redes-sociales .twitter-icon{
+    background: #1da1f2;
+    color: #fff;
+}
+.redes-sociales .instagram-icon{
+    color: #fff;
+    background: radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);
+}
+/*Header principal*/
+.mg-nav-widget-area-back{
+    background-image: url("../img/faro.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mg-nav-widget-area-back .inner{
+    width: 100%;
+    padding: 25px 0;
+}
+.mg-nav-widget-area-back .container-fluid {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.mg-nav-widget-area {
+    padding-bottom: 0px;
+}
+.mg-nav-widget-area .row {
+    justify-content: center;
+    text-align: center;
+}
+.mg-nav-widget-area .site-branding-text .site-title {
+    font-family: 'Montserrat Bold';
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 34px;
 }
