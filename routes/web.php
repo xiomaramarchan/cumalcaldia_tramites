@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConstanciaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Pruebas para generar los pdf
+Route::get('/PdfDemo', [ConstanciaController::class,'index']);
+Route::get('/sample-pdf', [ConstanciaController::class,'samplePDF'])->name('SamplePDF');
+Route::get('/save-pdf', [ConstanciaController::class,'savePDF'])->name('SavePDF');
+Route::get('/download-pdf', [ConstanciaController::class,'downloadPDF'])->name('DownloadPDF');
+Route::get('/html-to-pdf', [ConstanciaController::class,'htmlToPDF'])->name('HtmlToPDF');

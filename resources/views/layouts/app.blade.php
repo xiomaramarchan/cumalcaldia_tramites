@@ -99,7 +99,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Constancia de trabajo</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/PdfDemo') }}">Constancia de trabajo</a></li>
                                 </ul>
                             </li>
                             <!-- Authentication Links -->
