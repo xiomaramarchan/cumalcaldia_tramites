@@ -48,28 +48,11 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-<<<<<<< HEAD
-                                <a class="nav-link" href="#">Gacetas Oficiales</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestión</a>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Plan de Gobierno</a></li>
-                                <li><a class="dropdown-item" href="#">Proyectos</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ url('/PdfDemo') }}">Constancia de trabajo</a></li>
-                                </ul>
-=======
                                 <a class="nav-link" target="_blank" href="https://www.instagram.com/alcaldiacna/?hl=es">
                                     <span class="icon-soci instagram-icon">
                                         <i class="fab fa-instagram"></i>
                                     </span>
                                 </a>
->>>>>>> 314a41625346934114538d32b8136cc05b6d3e24
                             </li>
                         </ul>
                         </div>
@@ -136,7 +119,14 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
                                     <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Constancia de trabajo</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('Constancias') }}">Constancia de trabajo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Administración</a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('admin.dataempleados') }}">Importar y Exportar data de empleados</a></li>
+                                    <li><a class="dropdown-item" href="#">xxx</a></li>
                                     </ul>
                                 </li>
                                 <!-- Authentication Links -->
@@ -256,7 +246,7 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
                                         <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Constancia de trabajo</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('Constancias') }}">Constancia de trabajo</a></li>
                                         </ul>
                                     </li>
                                     <!-- Authentication Links -->
