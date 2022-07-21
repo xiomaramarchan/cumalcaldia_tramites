@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConstanciaController;
+use App\Http\Controllers\EmpleadoController;
 
 
 /*
@@ -24,8 +25,13 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Pruebas para generar los pdf
-Route::get('/PdfDemo', [ConstanciaController::class,'index']);
+Route::get('/constancias', [ConstanciaController::class,'index'])->name('Constancias');
 Route::get('/sample-pdf', [ConstanciaController::class,'samplePDF'])->name('SamplePDF');
 Route::get('/save-pdf', [ConstanciaController::class,'savePDF'])->name('SavePDF');
 Route::get('/download-pdf', [ConstanciaController::class,'downloadPDF'])->name('DownloadPDF');
 Route::get('/html-to-pdf', [ConstanciaController::class,'htmlToPDF'])->name('HtmlToPDF');
+
+// rutas para importar y exportar  la data de los empleados
+Route::get('admin/empleados', [EmpleadoController::class, 'index'])->name('admin.dataempleados');
+Route::post('importardataempleados', [EmpleadoController::class, 'importarDataEmpleados'])->name('empleados.importar');
+Route::get('exportardataempleados', [EmpleadoController::class, 'exportarDataEmpleados'])->name('empleados.exportar');
