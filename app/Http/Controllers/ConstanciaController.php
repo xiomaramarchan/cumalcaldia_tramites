@@ -9,7 +9,7 @@ class ConstanciaController extends Controller
 {
     //
     public function index(){
-    	return view('tramites/constancia');
+    	return view('tramites.constancia');
     }
 
     public function samplePDF()
