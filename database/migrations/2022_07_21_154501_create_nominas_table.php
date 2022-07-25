@@ -15,7 +15,7 @@ class CreateNominasTable extends Migration
     {
         Schema::create('nominas', function (Blueprint $table) {
             $table->id();
-            $table->descripcion();
+            $table->string('descripcion');            
             $table->timestamps();
         });
     }

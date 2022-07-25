@@ -15,12 +15,11 @@ class CreateEmpleadosTable extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->id();
-            $table->cedula();
-            $table->nombres();
-            $table->apellidos();
-            $table->telefono();
-            $table->email();
-            $table->direccion();
+            $table->string('cedula');
+            $table->string('nombres');
+            $table->string('apellidos');
+            $table->string('telefono');           
+            $table->string('direccion');
             $table->timestamps();
         });
     }
