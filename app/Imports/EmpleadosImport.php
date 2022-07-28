@@ -36,9 +36,9 @@ class EmpleadosImport implements ToModel, WithStartRow, WithCustomCsvSettings
             'cedula'    => $row[0],
             'nombres'   => $row[1],
             'apellidos' => $row[2],
-            'telefono'  => $row[3],
+            /*'telefono'  => $row[3],
             'email'     => $row[4],
-            'direccion' => $row[5],
+            'direccion' => $row[5],*/
             //
         ]);
     }
