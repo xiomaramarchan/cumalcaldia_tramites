@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Nomina extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'codigo',
+        'descripcion'
+     ];
+     /*protected $primaryKey = 'codigo';
+     public $incrementing = false;*/
 }
