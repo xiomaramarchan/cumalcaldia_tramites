@@ -96,7 +96,7 @@
                             </ul>
         -->
                             <!-- Right Side Of Navbar -->
-                            <ul class="navbar-nav ">
+                            <ul class="nav navbar-nav ">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="#">Bienvenidos</a>
                                 </li>
@@ -182,10 +182,11 @@
                                     <h1 class="site-title">
                                         <a href="">Alcaldía del Estado Sucre</a>
                                     </h1>
+                                    <p class="site-description"></p>
                                 </div>
                             </div>
                             <div class="col-md-6 text-right text-xs">
-                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 redes-sociales">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 redes-sociales ">
                                 <li class="nav-item">
                                     <a class="nav-link " target="_blank" href="https://es-la.facebook.com/AlcaldiaMpioPotencia">
                                         <span class="icon-soci facebook-icon">
@@ -218,12 +219,12 @@
                             <div class="col-md-6 text-xs">
                                 <p>
                                     <a href="http://" target="_blank" rel="noopener noreferrer" class="customize-unpreviewable">Alcaldía</a>
-                                    <span class="sep"></span>
+                                    <span class="sep"> | </span>
                                     Cumaná
                                 </p>  
                             </div>
                             <div class="col-md-6 text-right text-xs">
-                                <ul class="navbar-nav ">
+                                <ul class="navbar-nav info-right">
                                     <li class="nav-item ">
                                         <a class="nav-link" href="#">Bienvenidos</a>
                                     </li>
