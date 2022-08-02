@@ -14,12 +14,19 @@
     font-family: 'Poppins Medium';
     src: url(../font/poppins/Poppins-Medium.ttf);
 }
+@font-face {
+    font-family: 'AftaSansThin Regular' ;
+    src: url(../font/work-sans/AftaSansThin-Regular.otf);
+}
 /*---- Estilos generales ----*/
 body{
     background-color: #eee;
 }
 .border-none{
     border: 0px;
+}
+a {
+    text-decoration: none;
 }
 /*Botones*/
 .btn-alc-1{
@@ -88,8 +95,7 @@ body{
 .gr-nav-1{
     background: #202f5b;
     color: #ffffff;
-    padding: 0px;
-    height: 50px;
+    padding: 0px; 
 }
 .gr-nav-1 ul li{
 
@@ -212,4 +218,91 @@ body{
     margin-bottom: 15px;
     color: #ffffff;
     font-size: 34px;
+}
+/*---- Footer ----*/
+
+footer .overlay {
+    background: #121026;
+    padding: 40px 0 0 0;
+}
+footer .mg-footer-bottom-area {
+    padding-bottom: 30px;
+}
+footer .mg-footer-bottom-area .divide-line {
+    margin-bottom: 40px;
+    height: 2px;
+    width: 100%;
+    background: #1a182e;
+}
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+footer h1.site-title {
+    margin-bottom: 0;
+}
+body .site-title a, body .site-description {
+    color: #fff;
+}
+.mg-social {
+    padding: 0px;
+    margin: 0;
+}
+footer .mg-footer-copyright {
+    background: #090818;
+    padding: 25px 0;
+}
+footer .redes-sociales {
+    flex-direction: initial;
+    justify-content: end;
+}
+.site-branding-text .site-title a {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'Montserrat Bold';
+    text-decoration: none;
+    letter-spacing: -0.05em;
+}
+footer .redes-sociales  .nav-link {
+    padding: 0 !important;
+}
+footer .container-fluid {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.ms-auto {
+    margin-left: auto !important;
+}
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+footer .mg-footer-copyright .text-xs {
+    margin: auto 0;
+}
+.info-right {
+    display: block;
+    float: right;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+.info-right li {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 0;
+}
+footer .mg-footer-copyright .nav-link {
+    padding: 0.5rem;
+}
+footer .mg-footer-copyright p, footer .mg-footer-copyright a {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 0;
+    color: #aaaed1;
+    font-family: 'AftaSansThin Regular' ;
+}
+@media (min-width: 992px){
+    .mb-lg-0 {
+        margin-bottom: 0 !important;
+    }
 }
