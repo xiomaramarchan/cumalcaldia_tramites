@@ -14,8 +14,8 @@ class CreateNominasTable extends Migration
     public function up()
     {
         Schema::create('nominas', function (Blueprint $table){ 
-            $table->id();
-            $table->string('codigo','4')->unique();
+            $table->id();            
+            $table->string('codigo','4')->unique(); 
             $table->text('descripcion');            
             $table->timestamps();
         });

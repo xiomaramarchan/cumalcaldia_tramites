@@ -12,6 +12,8 @@ class Empleado extends Model
 
         'cedula','nombres','apellidos'/*,'telefono','email','direccion'*/
      ];
-     /*protected $primaryKey = 'cedula';
-     public $incrementing = false;*/
+     protected $primaryKey = 'cedula';
+     public $incrementing = false;
+     protected $keyType='string';
+     public $timestamps = false;
 }

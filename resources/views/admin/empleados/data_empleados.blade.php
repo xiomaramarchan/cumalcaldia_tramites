@@ -10,15 +10,20 @@
                 <div class="card-body">
                     <!-- Success message -->
                     @if(Session::has('error'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-error">
                             {{ Session::get('error') }}
                         </div>
+                    @elseif(Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+                    
                     @endif
                     <form action="{{ route('empleados.importar') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group mb-4" style="max-width: 500px; margin: 0 auto;">
                             <div class="custom-file text-left">
-                                <input type="file" name="file_empleados" class="custom-file-input" id="file_empleados" required>
+                                <input type="file" name="file_empleados" class="custom-file-input" id="file_empleados" accept=".csv" required>
                                 <label class="custom-file-label" for="file_empleados">Seleccione el archivo</label>
                             </div>
                         </div>

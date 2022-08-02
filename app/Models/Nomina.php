@@ -12,6 +12,8 @@ class Nomina extends Model
         'codigo',
         'descripcion'
      ];
-     /*protected $primaryKey = 'codigo';
-     public $incrementing = false;*/
+     protected $primaryKey = 'codigo';
+     public $incrementing = false;
+     protected $keyType='string';
+     //public $timestamps = false;
 }
