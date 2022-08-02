@@ -35,3 +35,7 @@ Route::get('/html-to-pdf', [ConstanciaController::class,'htmlToPDF'])->name('Htm
 Route::get('admin/empleados', [EmpleadoController::class, 'index'])->name('admin.dataempleados');
 Route::post('importardataempleados', [EmpleadoController::class, 'importarDataEmpleados'])->name('empleados.importar');
 Route::get('exportardataempleados', [EmpleadoController::class, 'exportarDataEmpleados'])->name('empleados.exportar');
+
+// rutas para importar y exportar la data de la nomina de empleados
+
+//Route::post('importardataempleadosnomina', [EmpleadoNominaController::class, 'importarDataEmpleadosNominas'])->name('empleados_nomina.importar');
