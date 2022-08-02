@@ -15,10 +15,9 @@ class CreateEmpleadoNominasTable extends Migration
     {
         Schema::create('empleado_nominas', function (Blueprint $table) {
 
-            $table->id();
-            /*$table->integer('nomina_id');            
-            $table->integer('empleado_id');*/
-
+            $table->id();  
+            $table->string('nomina_codigo');
+            $table->string('empleado_cedula');
             $table->double('sueldo_base');
             $table->double('sueldo_integral');
             $table->date('fecha_ingreso');
@@ -26,8 +25,12 @@ class CreateEmpleadoNominasTable extends Migration
             $table->text('cargo');
             $table->text('unidad_administrativa');
             $table->date('fecha_egreso');
-            $table->foreignId('nomina_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('empleado_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('nomina_codigo')->references('codigo')->on('nominas')->onDelete('cascade');;
+            $table->foreign('empleado_cedula')->references('cedula')->on('empleados')->onDelete('cascade');;       
+            
+            $table->index(['nomina_codigo', 'empleado_cedula']);
+            //$table->foreignId('nomina_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            //$table->foreignId('empleado_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
