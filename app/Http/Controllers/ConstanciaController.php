@@ -18,17 +18,19 @@ class ConstanciaController extends Controller
 
    
 
-    public function samplePDF(Request $request)
+    public function ConstanciaPdf(Request $request)
     {
 
-        //dd($request->cedula);
-
+        
         //Constancia de trabajo del trabajador
-        $datos_constancia = DB::table('empleados','empleado_nomina')
-        ->select('empleados.cedula', 'empleados.nombres', 'empleados.apellidos')
-        ->leftJoin('empleado_nomina', 'empleado_nomina.cedula', '=', 'empleados.cedula')
-        ->where('empleados.cedula','=', '15249486')
-        ->get();        
+        $datos_constancia = DB::table('empleados')
+        ->select('empleados.*', 'empleado_nominas.*', 'nominas.*')
+        ->join('empleado_nominas', 'empleado_nominas.empleado_cedula', '=', 'empleados.cedula')
+        ->join('nominas', 'nominas.codigo', '=', 'empleado_nominas.nomina_codigo')
+        ->where('empleados.cedula','=', $request->cedula)
+        ->get();  
+        
+        dd($datos_constancia);
         $html_content = '<h1>Generate a PDF using TCPDF in laravel </h1>
         		<h4>by<br/>Learn Infinity</h4>';
       
@@ -37,7 +39,7 @@ class ConstanciaController extends Controller
         PDF::AddPage();
         PDF::writeHTML($html_content, true, false, true, false, '');
 
-        PDF::Output('SamplePDF.pdf');
+        PDF::Output('Constancia.pdf');
     }
 
 

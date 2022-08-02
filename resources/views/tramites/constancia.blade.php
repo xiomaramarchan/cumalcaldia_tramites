@@ -8,7 +8,7 @@
                 <div class="card-header monts-bold bg-cl-1">{{ __('Constancias de Trabajo') }}</div>
 
                 <div class="card-body">
-                    <form method="GET" action="{{ route('SamplePDF') }}">
+                    <form method="GET" action="{{ route('ConstanciaPdf') }}">
                         @csrf
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nómina') }}</label>
@@ -22,7 +22,7 @@
 									</select>
 								</div>
 
-                                @error('name')
+                                @error('nomina')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -35,7 +35,7 @@
                             <div class="col-md-6">
                                 <input id="cedula" type="text" class="form-control @error('cedula') is-invalid @enderror" name="cedula" value="{{ old('cedula') }}" required autocomplete="cedula" autofocus>
 
-                                @error('name')
+                                @error('cedula')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -48,7 +48,7 @@
 				<tr>
 					<td width="25%">
 						<div class="form-group">
-							<a href="{{ route('SamplePDF') }}" class="btn btn-primary">Generate Sample PDF</a>
+							<a href="{{ route('ConstanciaPdf') }}" class="btn btn-primary">Generate Sample PDF</a>
 						</div>
 					</td>
 
