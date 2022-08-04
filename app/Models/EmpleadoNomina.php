@@ -10,7 +10,7 @@ class EmpleadoNomina extends Model
     use HasFactory;
     protected $fillable = [
 
-        'nomina_id','empleado_id','sueldo_base','sueldo_integral','fecha_ingreso','estatus','cargo','unidad_administrativa','fecha_egreso'
+        'nomina_codigo','empleado_cedula','sueldo_base','sueldo_integral','fecha_ingreso','estatus','cargo','unidad_administrativa','fecha_egreso'
      ];
      
 }
