@@ -27,7 +27,13 @@
             <!-- Primer menu: Hora y redes sociales -->
                 <nav class="navbar navbar-expand-lg gr-nav-2">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">18 de julio de 2022 15:45</a>
+                        <a class="navbar-brand" href="#">
+                            @php 
+                             use Carbon\Carbon;
+                             $diaActual = Carbon::now()->translatedFormat('d \d\e F \d\e Y'); 
+                             echo $diaActual
+                             @endphp 
+                           </a><span id="HoraActual"></span> 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -292,5 +298,17 @@
         </footer>
     </div>
     <script src="{{ asset('js/all.min.js') }}">  </script>
+    <script>
+        function showTime()
+        {
+            myDate = new Date();
+            hours = myDate.getHours();
+            minutes = myDate.getMinutes();   
+            if (hours < 10) hours = 0 + hours;
+            if (minutes < 10) minutes = "0" + minutes;   
+            $("#HoraActual").text(hours+ ":" +minutes);
+            setTimeout("showTime()", 1000);
+        }
+    </script>   
 </body>
 </html>
