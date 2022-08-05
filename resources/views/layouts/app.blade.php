@@ -25,13 +25,10 @@
     <div id="app">
       <div class="mg-head-detail hidden-xs">
             <!-- Primer menu: Hora y redes sociales -->
-                <nav class="navbar navbar-expand-lg gr-nav-2">
+                <nav class="navbar navbar-expand gr-nav-2">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">18 de julio de 2022 15:45</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <a class="navbar-brand">18 de julio de 2022 15:45</a>
+                        <div class="" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 redes-sociales">
                             <li class="nav-item">
                                 <a class="nav-link " target="_blank" href="https://es-la.facebook.com/AlcaldiaMpioPotencia">
@@ -65,7 +62,7 @@
                             <div class="container-fluid">
                                 <div class="mg-nav-widget-area">
                                     <div class="row align-items-center">
-                                        <div class="col-md-3 col-sm-4 text-center-xs">
+                                        <div class="col-lg-3 col-md-4 col-sm-6 col-11 text-center-xs">
                                             <div class="navbar-header">
                                                 <div class="site-branding-text">
                                                     <h1 class="site-title">Alcaldía del Estado Sucre</h1>
@@ -85,11 +82,13 @@
                         <!--a class="navbar-brand" href="{{ url('/') }}">
                             {{ config('app.name', 'Laravel') }}
                         </a-->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cumanaAlcaldias" aria-controls="cumanaAlcaldias" aria-expanded="false" aria-label="Toggle navigation">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                                  </svg>
+                            </button>
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse" id="cumanaAlcaldias">
                             <!-- Left Side Of Navbar 
                             <ul class="navbar-nav me-auto">
 
@@ -180,7 +179,7 @@
                             <div class="col-md-6">
                                 <div class="site-branding-text">
                                     <h1 class="site-title">
-                                        <a href="">Alcaldía del Estado Sucre</a>
+                                    Alcaldía del Estado Sucre
                                     </h1>
                                     <p class="site-description"></p>
                                 </div>
@@ -218,9 +217,9 @@
                         <div class="row">
                             <div class="col-md-6 text-xs">
                                 <p>
-                                    <a href="http://" target="_blank" rel="noopener noreferrer" class="customize-unpreviewable">Alcaldía</a>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer" class="customize-unpreviewable">Alcaldía
                                     <span class="sep"> | </span>
-                                    Cumaná
+                                    Cumaná</a>
                                 </p>  
                             </div>
                             <div class="col-md-6 text-right text-xs">
@@ -237,18 +236,11 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Gacetas Oficiales</a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestión</a>
-                                        <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Plan de Gobierno</a></li>
-                                        <li><a class="dropdown-item" href="#">Proyectos</a></li>
-                                        </ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Gestión</a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
-                                        <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="{{ route('Constancias') }}">Constancia de trabajo</a></li>
-                                        </ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Consultas</a>
                                     </li>
                                     <!-- Authentication Links -->
                                     @guest
