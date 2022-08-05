@@ -28,6 +28,9 @@ body{
 a {
     text-decoration: none;
 }
+.ml-auto{
+    margin-left: auto;
+}
 /*Botones*/
 .btn-alc-1{
     color: #fff;
@@ -218,6 +221,23 @@ a {
     margin-bottom: 15px;
     color: #ffffff;
     font-size: 34px;
+}
+/*---- Input file ----*/
+.inp-file-1{
+    border: #eb1313 1px solid;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #eb1313;
+}
+.inp-file-1:hover,
+.inp-file-1:focus,
+.inp-file-1:active {
+    border: #eb1313 1px solid;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: #eb1313;
+    color: #ffffff;
+    transition: 0.5s;
 }
 /*---- Footer ----*/
 
