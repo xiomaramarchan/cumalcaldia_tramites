@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Imports\EmpleadosImport;
 use App\Exports\EmpleadosExport;
+use App\Imports\ImportEmpleadoNomina;
 //use Maatwebsite\Excel\Excel;
 use Illuminate\Support\Facades\Validator;
 use Excel;
@@ -70,29 +71,26 @@ class EmpleadoController extends Controller
 
     public function importarDataEmpleadoNomina(Request $request){
 
-        $this->validate($request, [
+        /*$this->validate($request, [
             "file_empleados" => "required|mimes:xls,csv,xlsx" // txt is needed for csv mime type validation
-        ]);
+        ]);*/
         if($request->file("file_empleados")) {
-
-
-            Excel::import(new EmpleadosImport, $request->file('file_empleados')->store('temp'));
-            return back()->with('success', 'Data importada con éxito!');
-        /*try {
-            Excel::import(new EmpleadosImport, $request->file('file_empleados')->store('temp'));
-            return back()->with('success', 'Data importada con éxito!');
-        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+           
+            try {
+                Excel::import(new ImportEmpleadoNomina, $request->file('file_empleados')->store('temp'));
+                return back()->with('success', 'Data importada con éxito!');
+            } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
                 $msg = "";
                 $failures = $e->failures();
                 foreach ($failures as $failure) {
-                    $msg = "Ry ".$failure->row(); // row that went wrong
-                    $msg = $msg." vir hoof ".$failure->attribute(); // either heading key (if using heading row concern) or column index
-                    $msg = $msg.". ".$failure->errors()[0]; // Actual error messages from Laravel validator
-                    // $msg = $msg." : met waarde ".$failure->values(); // The values of the row that has failed: not available in version
+                    $msg = $failure->row(); // fila que falla
+                    $msg = $msg." ".$failure->attribute(); //ya sea clave de encabezado (si se usa la fila de encabezado) o índice de columna
+                    $msg = $msg." ".$failure->errors()[0]; // Actual error messages from Laravel validator
+                    $msg = $msg." :  con valor ".$failure->values(); //Los valores de la fila que ha fallado                }
+                    return back()->with("error", $msg);
                 }
-                return back()->with("error", $msg);
-            }*/
+            }
         }
-       // return back()->with("error", "Lêer nie gevind nie");       
+         
      }
 }

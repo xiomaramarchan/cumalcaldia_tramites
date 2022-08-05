@@ -26,14 +26,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Pruebas para generar los pdf
 Route::get('/constancias', [ConstanciaController::class,'index'])->name('Constancias');
-Route::get('/sample-pdf', [ConstanciaController::class,'samplePDF'])->name('SamplePDF');
+Route::get('/sample-pdf', [ConstanciaController::class,'ConstanciaPdf'])->name('ConstanciaPdf');
 Route::get('/save-pdf', [ConstanciaController::class,'savePDF'])->name('SavePDF');
 Route::get('/download-pdf', [ConstanciaController::class,'downloadPDF'])->name('DownloadPDF');
 Route::get('/html-to-pdf', [ConstanciaController::class,'htmlToPDF'])->name('HtmlToPDF');
 
 // rutas para importar y exportar  la data de los empleados
 Route::get('admin/empleados', [EmpleadoController::class, 'index'])->name('admin.dataempleados');
-Route::post('importardataempleados', [EmpleadoController::class, 'importarDataEmpleados'])->name('empleados.importar');
+Route::post('importardataempleados', [EmpleadoController::class, 'importarDataEmpleadoNomina'])->name('empleados.importar');
 Route::get('exportardataempleados', [EmpleadoController::class, 'exportarDataEmpleados'])->name('empleados.exportar');
 
 // rutas para importar y exportar la data de la nomina de empleados
