@@ -27,7 +27,13 @@
             <!-- Primer menu: Hora y redes sociales -->
                 <nav class="navbar navbar-expand gr-nav-2">
                     <div class="container-fluid">
-                        <a class="navbar-brand">18 de julio de 2022 15:45</a>
+                        <a class="navbar-brand">      
+                            @php 
+                             use Carbon\Carbon;
+                             $diaActual = Carbon::now()->translatedFormat('d \d\e F \d\e Y'); 
+                             echo $diaActual
+                             @endphp 
+                           </a><span id="HoraActual"></span> </a>
                         <div class="" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 redes-sociales">
                             <li class="nav-item">
@@ -287,5 +293,17 @@
     <script src="{{ asset('js/jquery-3.6.0.js') }}">  </script>
     <script src="{{ asset('js/previsualizador.js') }}">  </script>
     <script src="{{ asset('js/navigation.js') }}">  </script>
+    <script>
+        function showTime()
+        {
+            myDate = new Date();
+            hours = myDate.getHours();
+            minutes = myDate.getMinutes();   
+            if (hours < 10) hours = 0 + hours;
+            if (minutes < 10) minutes = "0" + minutes;   
+            $("#HoraActual").text(hours+ ":" +minutes);
+            setTimeout("showTime()", 1000);
+        }
+    </script>   
 </body>
 </html>
