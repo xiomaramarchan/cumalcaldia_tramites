@@ -231,7 +231,7 @@
                             <div class="col-md-6 text-right text-xs">
                                 <ul class="navp navbar-nav info-right">
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="#">Bienvenidos</a>
+                                        <a class="nav-link" href="http://localhost/cumalcaldia/">Bienvenidos</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">¿Quiénes Somos?</a>
