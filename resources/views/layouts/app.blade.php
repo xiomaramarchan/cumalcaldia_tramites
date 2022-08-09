@@ -241,13 +241,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Gacetas Oficiales</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Gestión</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Consultas</a>
-                                    </li>
+                                    </li>   
                                     <!-- Authentication Links -->
                                     @guest
                                         @if (Route::has('register'))
@@ -260,8 +254,6 @@
                                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                                             </li>
                                         @endif
-
-                                    
                                     @else
                                         <li class="nav-item dropdown">
                                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
