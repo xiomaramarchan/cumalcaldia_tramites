@@ -223,7 +223,7 @@
                                 </p>  
                             </div>
                             <div class="col-md-6 text-right text-xs">
-                                <ul class="navbar-nav info-right">
+                                <ul class="navp navbar-nav info-right">
                                     <li class="nav-item ">
                                         <a class="nav-link" href="#">Bienvenidos</a>
                                     </li>
@@ -284,5 +284,8 @@
         </footer>
     </div>
     <script src="{{ asset('js/all.min.js') }}">  </script>
+    <script src="{{ asset('js/jquery-3.6.0.js') }}">  </script>
+    <script src="{{ asset('js/previsualizador.js') }}">  </script>
+    <script src="{{ asset('js/navigation.js') }}">  </script>
 </body>
 </html>
