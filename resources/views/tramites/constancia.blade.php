@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 @section('content')
-<div class="container  lro-rs bg-cl-3">
+<div class="container  lro-rs lro-rs-ct bg-cl-3">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card border-none">
@@ -46,25 +46,25 @@
 						<div>
 						<table cellspacing="3" cellpadding="5" width="100%">
 				<tr>
-					<td width="25%">
+					<td class="text-center col-3">
 						<div class="form-group">
 							<a href="{{ route('ConstanciaPdf') }}" class="btn btn-primary">Generate Sample PDF</a>
 						</div>
 					</td>
 
-					<td width="25%">
+					<td class="text-center col-3">
 						<div class="form-group">
 							<a href="{{ route('SavePDF') }}" class="btn btn-primary">Save Sample PDF</a>
 						</div>
 					</td>
 
-					<td width="25%">
+					<td class="text-center col-3">
 						<div class="form-group">
 							<a href="{{ route('DownloadPDF') }}" class="btn btn-primary">Download Sample PDF</a>
 						</div>
 					</td>
 
-					<td width="25%">
+					<td class="text-center col-3">
 						<div class="form-group">
 							<a href="{{ route('HtmlToPDF') }}" class="btn btn-primary">Html To PDF</a>
 						</div>
@@ -75,8 +75,8 @@
 						</div>
 
                         <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4 cont-1">
-                                <button type="submit" class="btn btn-alc-2">
+                            <div class="text-end cont-1 ">
+                                <button type="submit" class="btn btn-alc-2 btn-ct">
                                     {{ __('Enviar') }}
                                 </button>
                             </div>
