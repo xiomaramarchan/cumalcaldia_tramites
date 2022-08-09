@@ -22,6 +22,10 @@
     font-family: 'WorkSans Medium' ;
     src: url(../font/work-sans/WorkSans-Medium.otf);
 }
+@font-face {
+    font-family: 'WorkSans Light' ;
+    src: url(../font/work-sans/WorkSans-Light.otf);
+}
 /*---- Estilos generales ----*/
 body{
     background-color: #eee;
