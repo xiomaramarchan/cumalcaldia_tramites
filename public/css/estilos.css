@@ -15,8 +15,12 @@
     src: url(../font/poppins/Poppins-Medium.ttf);
 }
 @font-face {
-    font-family: 'AftaSansThin Regular' ;
-    src: url(../font/work-sans/AftaSansThin-Regular.otf);
+    font-family: 'WorkSans Regular' ;
+    src: url(../font/work-sans/WorkSans-Regular.otf);
+}
+@font-face {
+    font-family: 'WorkSans Medium' ;
+    src: url(../font/work-sans/WorkSans-Medium.otf);
 }
 /*---- Estilos generales ----*/
 body{
@@ -80,14 +84,17 @@ a {
     padding: 0 7px 0 15px;
     font-size: 18px;
 }
-.lro-rs label,.lro-rs a,.lro-rs input{
+.lro-rs label,
+.lro-rs a,
+.lro-rs input,
+.lro-rs span{
     font-family: 'Poppins Medium';
 }
 .lro-rs button{
     font-family: 'Montserrat SemiBold';
 }
 .lro-rs .card-body {
-    padding: 2rem 1rem 4rem;
+    padding: 2rem 1rem 2rem;
 }
 .lro-rs .cont-1{
     margin-top: 10px;
@@ -97,8 +104,6 @@ a {
     background: #202f5b;
     color: #ffffff;
     padding: 0px; 
-}
-.gr-nav-1 ul li{
 }
 .gr-nav-1 ul li.active{
     background: #1151d3;
@@ -235,7 +240,23 @@ a {
     color: #ffffff;
     font-size: 34px;
 }
-/*---- Input file ----*/
+/*---- Input file: Data de empleados ----*/
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
 .inp-file-1{
     border: #eb1313 1px solid;
     padding: 5px 10px;
@@ -251,6 +272,13 @@ a {
     background-color: #eb1313;
     color: #ffffff;
     transition: 0.5s;
+}
+/*---- Constancias de trabajo ----*/
+.lro-rs-ct .card-body {
+    padding-bottom: 1rem;
+}
+.btn-ct{
+    margin-top: 30px;
 }
 /*---- Footer ----*/
 footer .site-title {
@@ -337,13 +365,15 @@ footer .mg-footer-copyright p, footer .mg-footer-copyright a {
     line-height: 18px;
     margin-bottom: 0;
     color: #aaaed1;
-    font-family: 'AftaSansThin Regular' ;
+    font-family: 'WorkSans Regular' ;
 }
 footer .mg-footer-copyright p, footer .mg-footer-copyright a:hover,
 footer .mg-footer-copyright p, footer .mg-footer-copyright a:active,
 footer .mg-footer-copyright p, footer .mg-footer-copyright a:focus  {
     color: #ffffff;
 }
+
+
 @media (min-width: 992px){
     .mb-lg-0 {
         margin-bottom: 0 !important;
