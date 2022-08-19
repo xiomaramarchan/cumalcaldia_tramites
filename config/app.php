@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Elibyy\TCPDF\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
     ],
 

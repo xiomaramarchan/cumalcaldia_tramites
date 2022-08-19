@@ -229,9 +229,9 @@
                                 </p>  
                             </div>
                             <div class="col-md-6 text-right text-xs">
-                                <ul class="navbar-nav info-right">
+                                <ul class="navp navbar-nav info-right">
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="#">Bienvenidos</a>
+                                        <a class="nav-link" href="http://localhost/cumalcaldia/">Bienvenidos</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">¿Quiénes Somos?</a>
@@ -241,13 +241,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Gacetas Oficiales</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Gestión</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Consultas</a>
-                                    </li>
+                                    </li>   
                                     <!-- Authentication Links -->
                                     @guest
                                         @if (Route::has('register'))
@@ -260,8 +254,6 @@
                                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                                             </li>
                                         @endif
-
-                                    
                                     @else
                                         <li class="nav-item dropdown">
                                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -290,6 +282,9 @@
         </footer>
     </div>
     <script src="{{ asset('js/all.min.js') }}">  </script>
+    <script src="{{ asset('js/jquery-3.6.0.js') }}">  </script>
+    <script src="{{ asset('js/previsualizador.js') }}">  </script>
+    <script src="{{ asset('js/navigation.js') }}">  </script>
     <script>
         function showTime()
         {

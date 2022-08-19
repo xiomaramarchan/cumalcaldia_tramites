@@ -86,12 +86,15 @@ class NominasSeeder extends Seeder
           ];
 
           foreach($nominas as $nomina){
-            $nom = Nomina::find($nomina['id']);
-
+            $nom = Nomina::find($nomina['codigo']);
             if(!$nom)
             {
-              Nomina::insert($nomina);
-            }
+              //Nomina::insert($nomina);
+              Nomina::create($nomina);
+            }            
+            /*else{
+                $nom->update($nomina);
+            }*/
           
         }
     }
