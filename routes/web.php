@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConstanciaController;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -21,6 +22,17 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+//Rutas para adminisdtrar los usuarios del sistema
+Route::get('/usuarios', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+Route::get('/usuarios/registrar', [App\Http\Controllers\UserController::class, 'create'])->name('users.create');
+Route::get('/usuarios/ver/{id}', [App\Http\Controllers\UserController::class, 'show'])->name('users.show');
+Route::get('/usuarios/editar/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
+Route::post('/usuarios/crear',  [App\Http\Controllers\UserController::class, 'store'])->name('users.store');
+Route::put('/usuarios/editar/{id}',  [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
+Route::get('/usuarios/eliminar/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('users.destroy');
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -131,7 +131,7 @@
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Administración</a>
                                     <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="{{ route('admin.dataempleados') }}">Importar y Exportar data de empleados</a></li>
-                                    <li><a class="dropdown-item" href="#">xxx</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('users.index')}}">Usuarios</a></li>
                                     </ul>
                                 </li>
                                 <!-- Authentication Links -->
@@ -282,7 +282,7 @@
         </footer>
     </div>
     <script src="{{ asset('js/all.min.js') }}">  </script>
-    <script src="{{ asset('js/jquery-3.6.0.js') }}">  </script>
+    {{--<script src="{{ asset('js/app.js') }}"></script>--}}
     <script src="{{ asset('js/previsualizador.js') }}">  </script>
     <script src="{{ asset('js/navigation.js') }}">  </script>
     <script>
