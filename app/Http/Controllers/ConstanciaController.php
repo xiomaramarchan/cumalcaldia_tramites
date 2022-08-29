@@ -47,7 +47,12 @@ class ConstanciaController extends Controller
             $pdf->SetY(15);
             $pdf->SetFont('helvetica', 'B', 20);
             // Title
-            $pdf->Cell(0, 15, 'Something new right here!!!', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $pdf->Cell(0, 11, 'REPÚBLICA BOLIVARIANA DE VENEZUELA', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $pdf->Cell(0, 11, 'ALCALDÍA BOLIVARIANA DEL MUNICIPIO SUCRE', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $pdf->Cell(0, 11, 'DIRECCIÓN DEL PODER MUNICIPAL DE TALENTO HUMANO', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $pdf->Cell(0, 11, 'CUMANÁ ESTADO SUCRE', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $pdf->Cell(0, 8, '"COORDINACION DE BIENESTAR SOCIAL"', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $pdf->Cell(0, 8, 'RIF:G-20000539-4', 0, false, 'C', 0, '', 0, false, 'M', 'M');
     
         });
 

@@ -7,7 +7,7 @@
     <title>Constancia de Trabajo</title>
 </head>
 <body>
-    <h1 style="text-align: center"><strong>CONSTANCIA</strong></h1>
+    <h1 style="text-align: center"><strong></strong></h1>
 
 	<br>
     @php
