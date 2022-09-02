@@ -17,8 +17,15 @@
         use Luecano\NumeroALetras\NumeroALetras;        
         $decimals=2;
         $formatter = new NumeroALetras();
-        $sueldo_trabajador=$formatter->toWords($datos_constancia[0]->sueldo_base, $decimals);   
+        //$sueldo_trabajador=$formatter->toWords($datos_constancia[0]->sueldo_base, $decimals);   
 
+         $sueldo_trabajador=$formatter->toWords($datos_constancia[0]->sueldo, $decimals);   
+         if( $datos_constancia[0]->tipoSueldo=='SB'){
+            $palabra='básico';
+         }
+         else{
+            $palabra='integral';
+        } 
         //----------------------------------------------------------------------------------------//
 
 
@@ -31,14 +38,17 @@
           $mes_letras= strftime('%B');
           $dia_letras=$formatter->toWords($Dia);
 
-          
-             
           //----------------------------------------------------------------------------------------//
         
+
+
+          //-------------------------Fecha en formato de barras---------------------------//
         
-
-
-
+          $fechaIngreso = date("d/m/Y", strtotime($datos_constancia[0]->fecha_ingreso));
+          
+          //----------------------------------------------------------------------------------------//
+          
+ 
 
     @endphp
 
@@ -47,24 +57,28 @@
         
         {{--$formatter = new NumeroALetras();
         $formatter->apocope = true;--}}
-
-	<p>
-        Quien suscribe, LCDO. WILLIANS JOSE MARVAL FERNANDEZ, Director del Poder Municipal de talento Humano, 
+      
+        <Span style = "color:#000000; line-height: 250%; font-size: 12px;">
+        <br />
+	<p align="justify;">
+       
+        Quien suscribe, <b>LCDO. WILLIANS JOSE MARVAL FERNANDEZ</b>, Director del Poder Municipal de talento Humano, 
         de la Alcaldía del Municipio Sucre del Estado Sucre, por medio de la presente hago constar que el(la) 
-        ciudadano(a): 
+        ciudadano(a): <b>
         {!! $datos_constancia[0]->nombres !!} 
-        {!! $datos_constancia[0]->apellidos !!} , Cédula de Identidad N° 
-        {!! $datos_constancia[0]->cedula !!}, presta servicios en esta Institución Municipal desde el 
-        {!! $datos_constancia[0]->fecha_ingreso !!} hasta la presente fecha, desempeñando el cargo de:
-        {!! $datos_constancia[0]->cargo !!}, adscrito(a) a la 
-        {!! $datos_constancia[0]->unidad_administrativa !!}, de la Alcaldía Bolivariana del Municipio Sucre del Estado Sucre.
-        Devengando un sueldo básico mensual de 
-        Bs. ({!!  $sueldo_trabajador !!} )    
+        {!! $datos_constancia[0]->apellidos !!}</b> , titular de la Cédula de Identidad N° 
+        <b>{!! $datos_constancia[0]->cedula !!}</b>, presta servicios en esta Institución Municipal desde el 
+        <b>{!! $fechaIngreso !!}</b> hasta la presente fecha, desempeñando el cargo de:
+        <b>{!! $datos_constancia[0]->cargo !!}</b>, adscrito(a) a la 
+        <b>{!! $datos_constancia[0]->unidad_administrativa !!}</b>, de la Alcaldía Bolivariana del Municipio Sucre del Estado Sucre.
+        Devengando un sueldo {!! $palabra !!} mensual de 
+        BOLIVARES. <b>(Bs.{!! $sueldo_trabajador !!} ).</b>   
     </p>
     <p>
-        Constancia que se expide a petición de la parte interesada, en la ciudad de Cumaná, a los {!! $dia_letras !!} ({!!  $Dia !!}) días del mes de {!! $mes_letras !!}  de  {!!  $Anio !!} 
+       <!-- Constancia que se expide a petición de la parte interesada, en la ciudad de Cumaná, a los {!! $dia_letras !!} ({!!  $Dia !!}) días del mes de {!! $mes_letras !!}  de  {!!  $Anio !!}. -->
+       Constancia que se expide a petición de la parte interesada, en la ciudad de Cumaná, a los {!!  $Dia !!} días del mes de {!! $mes_letras !!}  de  {!!  $Anio !!}.
     </p>
-
+    </ span> 
     
 </body>
 </html>

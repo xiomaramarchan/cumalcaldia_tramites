@@ -29,6 +29,20 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Constacia') }}</label>
+
+                            <div class="col-md-6">
+								<div class="form-group">									
+									<select class="form-control" name="tipo_const" id="tipo_const">
+										
+										<option value="SB">SUELDO BASE</option>
+                                        <option value="SI">SUELDO INTEGRAL</option>
+
+									</select>
+								</div>
+                            </div>
+                        </div>
 						<div class="row mb-3">
                             <label for="ceula" class="col-md-4 col-form-label text-md-end">{{ __('Cédula') }}</label>
 
