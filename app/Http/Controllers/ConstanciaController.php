@@ -88,12 +88,17 @@ class ConstanciaController extends Controller
         // Custom Footer
         PDF::setFooterCallback(function($pdf) {
 
-
             $datos_director = DB::table('director')
             ->select('director.*')
             ->get();
 
-
+            //-------------------------Fecha en formato de barras---------------------------//
+        
+          $fecha_nombramientoo = date("d/m/Y", strtotime($datos_director[0]->fecha_nombramiento));
+          
+          //----------------------------------------------------------------------------------------//
+          
+ 
             $pdf->SetXY(20,220);
             $pdf->SetFont('helvetica', 'I', 12);
             $pdf->Cell(0,12, $datos_director[0]->titulo_academico.'. '.$datos_director[0]->nombres.' '.$datos_director[0]->apellidos, 0, false, 'C', 0, '', 0, false, 'M', 'M');
@@ -104,7 +109,7 @@ class ConstanciaController extends Controller
           
             $pdf->SetXY(20,240);
             $pdf->SetFont('helvetica', 'I', 12);
-            $pdf->Cell(0,12, $datos_director[0]->resolucion.'de Fecha'.$datos_director[0]->fecha_nombramiento, 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $pdf->Cell(0,12, $datos_director[0]->resolucion.' de Fecha '.$fecha_nombramientoo, 0, false, 'C', 0, '', 0, false, 'M', 'M');
           
             $pdf->SetXY(20,250);
             $pdf->SetFont('helvetica', 'I', 12);
@@ -145,7 +150,6 @@ class ConstanciaController extends Controller
         PDF::Output(public_path($filename), 'F');
 
         return response()->download(public_path($filename));      
-        
         
     }
 
