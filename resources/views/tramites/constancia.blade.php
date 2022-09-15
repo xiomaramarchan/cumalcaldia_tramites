@@ -59,7 +59,7 @@
 
 						<div>
 						<table cellspacing="3" cellpadding="5" width="100%">
-				<tr>
+				{{--<tr>
 					<td class="text-center col-3">
 						<div class="form-group">
 							<a href="{{ route('ConstanciaPdf') }}" class="btn btn-primary">Generate Sample PDF</a>
@@ -84,7 +84,7 @@
 						</div>
 					</td>
 
-				</tr>
+				</tr>--}}
 			</table>
 						</div>
 
