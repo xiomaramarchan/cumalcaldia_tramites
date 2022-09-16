@@ -58,11 +58,10 @@
         {{--$formatter = new NumeroALetras();
         $formatter->apocope = true;--}}
       
-        <Span style = "color:#000000; line-height: 250%; font-size: 12px;">
+        <span style = "color:#000000; line-height: 250%; font-size: 12px;">
         <br />
-	<p align="justify;">
-       
-        Quien suscribe, <b>LCDO. WILLIANS JOSE MARVAL FERNANDEZ</b>, Director del Poder Municipal de talento Humano, 
+	    <p align="justify;">       
+        Quien suscribe, <b>{!! $datos_director[0]->titulo_academico !!}. {!! $datos_director[0]->nombres !!} {!! $datos_director[0]->apellidos !!}</b>, Director del Poder Municipal de talento Humano, 
         de la Alcaldía del Municipio Sucre del Estado Sucre, por medio de la presente hago constar que el(la) 
         ciudadano(a): <b>
         {!! $datos_constancia[0]->nombres !!} 

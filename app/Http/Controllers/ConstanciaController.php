@@ -1,17 +1,19 @@
 <?php
 namespace App\Http\Controllers;
+
+use App\Models\Director;
 use Illuminate\Http\Request;
 use PDF;
 use App\Models\Nomina;
 use Illuminate\Support\Facades\DB;
-//header("Content-Type: text/html;charset=utf-8");
 
 class ConstanciaController extends Controller
 {
     //
     public function index(){
-        $nominas=Nomina::all();
+        $nominas=Nomina::all();   
     	return view('tramites.constancia', ['nominas' => $nominas]);
+        
     }
    
 
@@ -40,19 +42,23 @@ class ConstanciaController extends Controller
             $datos_constancia[0]->tipoSueldo='SI';
         }
         
-        $filename = 'hello_world.pdf';
+        $filename = 'constancia_'.$request->cedula.'_'.$request->tipo_const.'.pdf'; 
 
+        $datos_director = DB::table('director')->where('cargo', 'DIRECTOR DE TALENTO HUMANO')->get();
        
-        $view = \View::make('tramites.generar_constancia_pdf')->with(compact('datos_constancia'));  
+        $view = \View::make('tramites.generar_constancia_pdf')->with(compact('datos_constancia', 'datos_director'));  
         $html = $view->render();
        
 
     	PDF::setHeaderCallback(function($pdf) {
 
-            //$pdf->Image('../../../public/img/escudo', 0, 10, 50, 50, 'JPG', '', '', false, 300, '', false, false, 0, $fitbox, false, false);
-            //$pdf->Image('../../../public/img/LogoAlcaldia', 100, 10, 50, 50, 'JPG', '', '', false, 300, '', false, false, 0, $fitbox, false, false);
-            // Set font
-              // Title
+
+            $url_escudo= public_path('img/faro.jpg');
+            $url_logo= public_path('img/faro.jpg');
+            //$pdf->Image($url, x, y, w, h, 'format');
+            $pdf->Image($url_escudo, 15, 10, 30, 30, 'JPG');
+            $pdf->Image($url_logo, 165, 10, 30, 30, 'JPG');
+            
 
             $pdf->SetY(19);
             $pdf->SetFont('helvetica', '', 11);
@@ -86,15 +92,13 @@ class ConstanciaController extends Controller
         });
         
         // Custom Footer
-        PDF::setFooterCallback(function($pdf) {
-
-            $datos_director = DB::table('director')
-            ->select('director.*')
-            ->get();
+        PDF::setFooterCallback(function($pdf) {       
+            
+            $datos_director = DB::table('director')->where('cargo', 'DIRECTOR DE TALENTO HUMANO')->get();
 
             //-------------------------Fecha en formato de barras---------------------------//
         
-          $fecha_nombramientoo = date("d/m/Y", strtotime($datos_director[0]->fecha_nombramiento));
+            $fecha_nombramientoo = date("d/m/Y", strtotime($datos_director[0]->fecha_nombramiento ));
           
           //----------------------------------------------------------------------------------------//
           
@@ -154,7 +158,7 @@ class ConstanciaController extends Controller
     }
 
 
-    public function savePDF()
+   /*  public function savePDF()
     {    
         $html_content = '<h1>Generate a PDF using TCPDF in laravel </h1>
         		<h4>by<br/>Learn Infinity</h4>';
@@ -164,9 +168,9 @@ class ConstanciaController extends Controller
         PDF::writeHTML($html_content, true, false, true, false, '');
 
         PDF::Output(public_path(uniqid().'_SamplePDF.pdf'), 'F');
-    }
+    } */
 
-    public function downloadPDF()
+   /*  public function downloadPDF()
     {    
         $html_content = '<h1>Generate a PDF using TCPDF in laravel </h1>
         		<h4>by<br/>Learn Infinity</h4>';
@@ -177,10 +181,10 @@ class ConstanciaController extends Controller
         PDF::writeHTML($html_content, true, false, true, false, '');
 
         PDF::Output(uniqid().'_SamplePDF.pdf', 'D');
-    }
+    } */
 
 
-    public function HtmlToPDF()
+   /*  public function HtmlToPDF()
     {    
         $view = \View::make('HtmlToPDF');
         $html_content = $view->render();
@@ -195,6 +199,6 @@ class ConstanciaController extends Controller
         PDF::writeHTML($html_content, true, false, true, false, '');
 
         PDF::Output(uniqid().'_SamplePDF.pdf');
-    }
+    } */
 }
 
