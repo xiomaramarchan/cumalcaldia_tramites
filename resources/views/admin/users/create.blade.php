@@ -43,7 +43,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Contraseña') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -60,6 +60,21 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+                        <div class="row mb-3">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
+
+                            <div class="col-md-6">
+                                <select class="form-select" aria-label="Rol">
+                                    <option selected>Seleccione el rol</option>
+                                    @foreach($roles as $rol)
+                                    <option value="{{$rol->id}}">{{$rol->name}}</option>
+                                    @endforeach                                
+                                 </select>
+                            </div>
+                        </div>
+
+                        
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4 cont-1">
