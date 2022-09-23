@@ -62,7 +62,7 @@
         <br />
 	    <p align="justify;">       
         Quien suscribe, <b>{!! $datos_director[0]->titulo_academico !!}. {!! $datos_director[0]->nombres !!} {!! $datos_director[0]->apellidos !!}</b>, Director del Poder Municipal de talento Humano, 
-        de la Alcaldía del Municipio Sucre del Estado Sucre, por medio de la presente hago constar que el(la) 
+        de la Alcaldía del Municipio Sucre del Estado Sucre, por medio de la presente hago constar que el (la) 
         ciudadano(a): <b>
         {!! $datos_constancia[0]->nombres !!} 
         {!! $datos_constancia[0]->apellidos !!}</b> , titular de la Cédula de Identidad N° 

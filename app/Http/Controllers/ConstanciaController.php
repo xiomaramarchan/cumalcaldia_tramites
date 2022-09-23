@@ -53,11 +53,11 @@ class ConstanciaController extends Controller
     	PDF::setHeaderCallback(function($pdf) {
 
 
-            $url_escudo= public_path('img/faro.jpg');
-            $url_logo= public_path('img/faro.jpg');
+            $url_escudo= public_path('img/escudo.jpg');
+            $url_logo= public_path('img/LogoAlcaldia.jpg');
             //$pdf->Image($url, x, y, w, h, 'format');
-            $pdf->Image($url_escudo, 15, 10, 30, 30, 'JPG');
-            $pdf->Image($url_logo, 165, 10, 30, 30, 'JPG');
+            $pdf->Image($url_escudo, 10, 10, 35, 30, 'JPG');
+            $pdf->Image($url_logo, 165, 10, 35, 30, 'JPG');
             
 
             $pdf->SetY(19);
@@ -77,11 +77,11 @@ class ConstanciaController extends Controller
             $pdf->Cell(0,11, 'CUMANÁ ESTADO SUCRE', 0, false, 'C', 0, '', 0, false, 'M', 'M');
            
             $pdf->SetFont('helvetica', '', 8);
-            $pdf->SetY(34);
+            $pdf->SetY(35);
             $pdf->Cell(0,8, '"COORDINACIÓN DE BIENESTAR SOCIAL"', 0, false, 'C', 0, '', 0, false, 'M', 'M');
            
             $pdf->SetFont('helvetica', '', 8);
-            $pdf->SetY(38);
+            $pdf->SetY(39);
             $pdf->Cell(0,8,'RIF:G-20000539-4', 0, false, 'C', 0, '', 0, false, 'M', 'M');
             
             $pdf->SetFont('helvetica', 'B', 12);
