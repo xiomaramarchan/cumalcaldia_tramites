@@ -71,7 +71,7 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6 col-11 text-center-xs">
                                             <div class="navbar-header">
                                                 <div class="site-branding-text">
-                                                    <h1 class="site-title">Alcaldía del Estado Sucre</h1>
+                                                    <h1 class="site-title">Alcaldía de Cumaná del Estado Sucre</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,6 +115,12 @@
                                     <a class="nav-link" href="#">Gacetas Oficiales</a>
                                 </li>
                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('Constancias') }}">Constancia de trabajo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestión</a>
                                     <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Plan de Gobierno</a></li>
@@ -122,9 +128,11 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Servicios</a>
                                     <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{ route('Constancias') }}">Constancia de trabajo</a></li>
+                                    <li><a class="dropdown-item" href="#">Samat</a></li>
+                                    <li><a class="dropdown-item" href="#">Saminfra</a></li>
+                                    <li><a class="dropdown-item" href="#">Ascienda</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -185,7 +193,7 @@
                             <div class="col-md-6">
                                 <div class="site-branding-text">
                                     <h1 class="site-title">
-                                    Alcaldía del Estado Sucre
+                                    Alcaldía de Cumaná del Estado Sucre
                                     </h1>
                                     <p class="site-description"></p>
                                 </div>
@@ -230,9 +238,6 @@
                             </div>
                             <div class="col-md-6 text-right text-xs">
                                 <ul class="navp navbar-nav info-right">
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="http://localhost/cumalcaldia/">Bienvenidos</a>
-                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">¿Quiénes Somos?</a>
                                     </li>
@@ -242,37 +247,6 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Gacetas Oficiales</a>
                                     </li>   
-                                    <!-- Authentication Links -->
-                                    @guest
-                                        @if (Route::has('register'))
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrate') }}</a>
-                                            </li>
-                                        @endif
-                                        @if (Route::has('login'))
-                                            <li class="nav-item active">
-                                                <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
-                                            </li>
-                                        @endif
-                                    @else
-                                        <li class="nav-item dropdown">
-                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                {{ Auth::user()->name }}
-                                            </a>
-
-                                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                                document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
-                                                </a>
-
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                    @csrf
-                                                </form>
-                                            </div>
-                                        </li>
-                                    @endguest
                                 </ul>
                             </div>
                         </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -17,13 +18,19 @@ class UserController extends Controller
    
     public function create()
     {
-        return view('admin.users.create');
+        $roles = DB::table('roles')->get(); 
+        
+        return view('admin.users.create')->with(compact('roles'));
     }
 
     public function store(Request $request)
     {
+        dd($request);
         $user = new User($request->all());
+
         $user->save();
+
+        $idUsuario = $user->id;
         return redirect()->action([UserController::class, 'index']);
     }
 
@@ -53,7 +60,6 @@ class UserController extends Controller
         $user->delete();
         return redirect()->action([UserController::class, 'index']);
     }
-        
 
 
 }

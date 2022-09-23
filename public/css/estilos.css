@@ -39,6 +39,13 @@ a {
 .ml-auto{
     margin-left: auto;
 }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.05em;
+    line-height: 1.3;
+    margin: 0 0 1.4rem;
+}
 /*Botones*/
 .btn-alc-1{
     color: #fff;
@@ -242,7 +249,7 @@ a {
     font-family: 'Montserrat Bold';
     margin-bottom: 15px;
     color: #ffffff;
-    font-size: 34px;
+    font-size: 29px;
 }
 /*---- Input file: Data de empleados ----*/
 .inputfile {
