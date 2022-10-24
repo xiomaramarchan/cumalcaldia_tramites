@@ -65,7 +65,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
 
                             <div class="col-md-6">
-                                <select class="form-select" aria-label="Rol">
+                                <select name="rol" id="rol" class="form-select" aria-label="Rol">
                                     <option selected>Seleccione el rol</option>
                                     @foreach($roles as $rol)
                                     <option value="{{$rol->id}}">{{$rol->name}}</option>

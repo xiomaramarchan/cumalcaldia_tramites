@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+//use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
+
 
 class UserController extends Controller
 {
@@ -25,12 +28,16 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
-        $user = new User($request->all());
+        //dd($request);
+        //$user = new User($request->all());
 
-        $user->save();
-
-        $idUsuario = $user->id;
+        //$user->save();
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        $user->assignRole($request->rol);      
         return redirect()->action([UserController::class, 'index']);
     }
 
