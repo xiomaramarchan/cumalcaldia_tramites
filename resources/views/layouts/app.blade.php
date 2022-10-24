@@ -108,25 +108,20 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">¿Quiénes Somos?</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Noticias</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Gacetas Oficiales</a>
-                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Novedades</a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Noticias Locales y Globales</a></li>
+                                    <li><a class="dropdown-item" href="#">Ordenanza Oficial</a></li>
+                                    <li><a class="dropdown-item" href="#">Ultimos Proyectos</a></li>
+                                    </ul>
+                                </li>    
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultas</a>
                                     <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="{{ route('Constancias') }}">Constancia de trabajo</a></li>
                                     </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestión</a>
-                                    <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Plan de Gobierno</a></li>
-                                    <li><a class="dropdown-item" href="#">Proyectos</a></li>
-                                    </ul>
-                                </li>
+                                </li>   
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Servicios</a>
                                     <ul class="dropdown-menu">
@@ -134,7 +129,7 @@
                                     <li><a class="dropdown-item" href="#">Saminfra</a></li>
                                     <li><a class="dropdown-item" href="#">Ascienda</a></li>
                                     </ul>
-                                </li>
+                                </li>             
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Administración</a>
                                     <ul class="dropdown-menu">
@@ -245,7 +240,7 @@
                                         <a class="nav-link" href="#">Noticias</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Gacetas Oficiales</a>
+                                        <a class="nav-link" href="#">Ordenanza Oficial</a>
                                     </li>   
                                 </ul>
                             </div>
